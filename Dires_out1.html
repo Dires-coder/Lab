@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dires Gashu website</title>
+    <!-- Linking CSS File -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Fontawesome link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- Bootstrap link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+    <style>
+      /* Color variables */
+:root {
+  --white-color: #fff;
+  --bg-color: #fff;
+  --gray-color: #ccc;
+}
+.bg-dark {
+  --bs-bg-opacity: 1;
+  background-color: rgb(132, 114, 42) !important;
+}
+
+/* Changing background color */
+body {
+  background: var(--bg-color) !important;
+}
+
+/* Changing link color */
+.nav-item .nav-link {
+  color: var(--white-color);
+}
+
+/* Hero section background image */
+.hero {
+  height: 100vh;
+  background-image: url("https://raw.githubusercontent.com/Dires-coder/new1/main/background.webp");
+  background-repeat: no-repeat;
+  background-position: 60% 0%;
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: 20px;
+}
+
+#skills i {
+  height: 100px;
+  width: 100px;
+}
+
+#portfolio img {
+  height: 300px;
+  object-fit: cover;
+}
+
+#about .img,
+#about img,
+.hire-text h2 {
+  position: relative;
+}
+
+/* Timeline background line */
+#about .img::before {
+  content: "";
+  left: 50%;
+  width: 4px;
+  position: absolute;
+  height: calc(100% + 140px);
+  background: var(--gray-color);
+}
+
+#about img,
+#about .hire-text h2 {
+  width: 140px;
+}
+
+#about .hire-text h2 {
+  height: 140px;
+}
+
+.social-icons a {
+  width: 40px;
+  height: 40px;
+}
+
+footer .social-icons a {
+  width: 30px;
+  height: 30px;
+}
+
+#cv img {
+  width: 230px;
+}
+
+/* Contact section background image */
+#contact {
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-image: url("../images/contact-bg.jpeg");
+}
+
+@media screen and (max-width: 990px) {
+  #skills .card {
+    width: calc(100% / 2 - 10px) !important;
+  }
+}
+
+@media screen and (max-width: 668px) {
+  #skills .card,
+  #portfolio .card-wrapper {
+    width: 100% !important;
+  }
+ #about .hire-text h2 {
+   height: 70px;
+   width: 70px;
+ }
+}
+/* wrapper */
+.wrapper {
+        margin-top: 80px;
+        height: 8vh;
+        width: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .effect-wrapper {
+        border: 2px solid white;
+        color: rgb(144, 57, 9);
+        border-radius: 20px;
+        font-size: 32px;
+        font-family: "Akira";
+        padding: 15px 50px;
+        line-height: 100%;
+        text-align: left;
+        font-weight: normal;
+        display: flex;
+        align-items: center;
+      }
+
+      #non-displayable {
+        font-weight: bold;
+        color: #e5e9ebdc;
+        margin-right: 10px;
+      }
+
+      #typed {
+        width: 450px;
+        font-family: "Akira";
+        line-height: 100%;
+        text-transform: uppercase;
+        padding-left: 14px;
+        font-weight: bold;
+        color: #3b141c;
+      }
+
+      .cursor {
+        display: inline-block;
+        background-color: #b0ff95;
+        animation: blinker 800ms infinite;
+      }
+
+      .cursor.typing-true {
+        animation: none;
+      }
+
+      @keyframes blinker {
+        0% {
+          background-color: #00aeff;
+        }
+
+        50% {
+          background-color: transparent;
+        }
+      }
+      /* mobile view*/
+      @media (max-width: 767px) {
+  .wrapper {
+    margin-top: 50px;
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .effect-wrapper {
+    border: 2px solid white;
+    color: white;
+    border-radius: 20px;
+    font-size: 14px;
+    font-family: "Akira";
+    padding: 10px 30px;
+    line-height: 100%;
+    text-align: left;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+  }
+
+  #non-displayable {
+    font-weight: bold;
+    color: #e5e9ebdc;
+    margin-right: 8px;
+  }
+
+  #typed {
+    width: 100%;
+    max-width: 300px;
+    font-family: "Akira";
+    line-height: 100%;
+    text-transform: uppercase;
+    padding-left: 10px;
+    font-weight: bold;
+    color: #3b141c;
+  }
+}
+
+/*grid*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+ 
+  font-family: Arial;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column (if you want) */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  display: none; /* Hide columns by default */
+}
+
+/* Clear floats after rows */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+/* Add a grey background color on mouse-over */
+.btn:hover {
+  background-color: #ddd;
+}
+
+/* Add a dark background color to the active button */
+.btn.active {
+  background-color: #666;
+   color: white;
+}
+/* grif*/
+/* new */
+/* Mobile view */
+@media (max-width: 767px) {
+  .w3-content {
+    width: 100%;
+  }
+
+  .mySlides {
+    width: 100%;
+    height: 300px;
+  }
+
+  .w3-button {
+    font-size: 24px;
+    padding: 8px 12px;
+  }
+
+  .w3-display-left {
+    left: 0;
+  }
+
+  .w3-display-right {
+    right: 0;
+  }
+}
+
+/* Desktop view */
+@media (min-width: 768px) {
+  .w3-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .mySlides {
+    width: 100%;
+    height: 425px;
+  }
+
+  .w3-button {
+    font-size: 32px;
+    padding: 12px 16px;
+  }
+
+  .w3-display-left {
+    left: 0;
+  }
+
+  .w3-display-right {
+    right: 0;
+  }
+}
+    </style>
+  </head>
+  <body>
+    <!-- Header & Navbar -->
+    <header class="bg-dark fixed-top">
+      <nav class="container-xxl navbar navbar-expand-lg py-3 bg-dark navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand fw-bold fs-3" href="#">Liyu cards</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="#skills">SKILLS</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="#portfolio">PORTFOLIO</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="#about">ABOUT</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="#cv">CURRICULUM VITAE</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="#contact">CONTACT</a>
+              </li>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero or Showcase Section -->
+    <section class="hero d-flex flex-column align-items-center justify-content-center">
+        <div class="wrapper">
+            <div class="effect-wrapper">
+              <span id="non-displayable" style="color: rgb(7, 5, 1);">Liyu card:</span>
+              <span id="typed"></span>
+            </div>
+          </div>
+      <div class="text-center">
+        <h1 class="h1 text-white fw-medium fst-italic">Dires Gashu</h1>
+        <h2 class="display-3 text-white fw-bold">Learning Experience Designer<br /> </h2>
+        <a href="#skills" class="btn btn-lg fs-6 fw-medium mt-5 btn-primary p-3">TELL ME MORE</a>
+      </div>
+    </section>
+    
+    <!-- Skills Section -->
+    <section class="container py-5" id="skills">
+      <div class="row mt-4 py-3">
+        <div class="col-12 d-flex flex-column text-center justify-content-center">
+          <h2>SKILLS</h2>
+          <h5 class="text-secondary fw-normal py-2 fst-italic">Continuously improving my skills and knowledge in the field.</h5>
+        </div>
+      </div>
+      <div class="row d-flex justify-content-between mx-0">
+        <div class="card mt-5 d-flex flex-column align-items-center text-center bg-white p-4" style="width: 25rem">
+          <i class="text-white bg-primary d-flex align-items-center justify-content-center fs-2 rounded-circle fa-solid fa-cart-shopping"></i>
+          <h3 class="mt-4 h4">Front-end Development</h3>
+          <p class="text-center">Proficient in HTML, CSS, and JavaScript. Experienced in responsive web design, building user-friendly interfaces, and using modern frameworks like ReactJS.</p>
+        </div>
+        <div class="card mt-5 d-flex flex-column align-items-center text-center bg-white p-4" style="width: 25rem">
+          <i class="text-white bg-primary d-flex align-items-center justify-content-center fs-2 rounded-circle fa-solid fa-laptop"></i>
+          <h3 class="mt-4 h4">Experience Designer</h3>
+          <p class="text-center"> Create engaging and meaningful experiences for users across various digital and physical touchpoints.</p>
+        </div>
+        <div class="card mt-5 d-flex flex-column align-items-center text-center bg-white p-4" style="width: 25rem">
+          <i class="text-white bg-primary d-flex align-items-center justify-content-center fs-2 rounded-circle fa-solid fa-mobile-screen-button"></i>
+          <h3 class="mt-4 h4">Digital card maker</h3>
+          <p class="text-center">provide a tool that allows users to create and customize digital cards for various purposes. </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+     <!--New-->
+    
+<br><br><br><br><br>
+      
+     <!--new slide-->
+    <section class="container py-5" id="portfolio">
+      <h1><marquee  direction="left"  loop="3">Let's explore my Portfolio here</marquee></h1>
+      <div class="w3-content w3-display-container">
+        <img class="mySlides" src="https://raw.githubusercontent.com/Dires-coder/new1/main/photo/3.jpg" style="width:100%">
+        <img class="mySlides" src="https://raw.githubusercontent.com/Dires-coder/new1/main/photo/5.jpg" style="width:100%">
+        <img class="mySlides" src="https://raw.githubusercontent.com/Dires-coder/new1/main/photo/6.jpg" style="width:100%">
+        <img class="mySlides" src="https://raw.githubusercontent.com/Dires-coder/new1/main/photo/7.jpg" style="width:100%">
+        <img class="mySlides" src="https://raw.githubusercontent.com/Dires-coder/new1/main/photo/10.jpg" style="width: 100%">
+        <img class="mySlides" src="https://raw.githubusercontent.com/Dires-coder/new1/main/photo/9.jpg" style="width: 100%">
+        <img class="mySlides" src="https://raw.githubusercontent.com/Dires-coder/new1/main/photo/7.jpg" style="width: 100%">
+      
+        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+      </div>
+      
+      <script>
+      var slideIndex = 1;
+      showDivs(slideIndex);
+      
+      function plusDivs(n) {
+        showDivs(slideIndex += n);
+      }
+      
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length}
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";  
+        }
+        x[slideIndex-1].style.display = "block";  
+      }
+      </script> 
+    </section>
+
+    <!-- About Section -->
+    <section class="container py-5" id="about">
+        <h2>About us</h2>
+        <div id="myBtnContainer">
+          <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+          <button class="btn" onclick="filterSelection('nature')"> People</button>
+          <button class="btn" onclick="filterSelection('cars')"> Service</button>
+          <button class="btn" onclick="filterSelection('people')"> Uniqness</button>
+        </div>
+        
+        <!-- Portfolio Gallery Grid -->
+        <div class="row">
+          <div class="column nature">
+            <div class="content">
+              <img src="https://raw.githubusercontent.com/Dires-coder/new1/main/cars1.jpg" alt="Mountains" style="width:100%">
+              <h4>CEO</h4>
+              <p>Dires Gashu is the founder and CEO of Liyu cards.</p>
+              
+              
+            </div>
+          </div>
+          <div class="column nature">
+            <div class="content">
+        
+              <h4>Co-founder</h4>
+              <p>Jhon is co-founder of Liyu cards</p>
+            </div>
+          </div>
+          <div class="column nature">
+            <div class="content">
+              <h4>Sales</h4>
+              <p>Fraol is sales at Liyu cards</p>
+            </div>
+          </div>
+        
+          <div class="column cars">
+            <div class="content">
+              <img src="/w3images/cars1.jpg" alt="Car" style="width:100%">
+              <h4>Network</h4>
+              <p>Our digital card allows for seamless networking and instant exchange of  information.</p>
+            </div>
+          </div>
+          <div class="column cars">
+            <div class="content">
+              <img src="/w3images/cars2.jpg" alt="Car" style="width:100%">
+              <h4>Contact</h4>
+              <p>Our digital card offers a compact, contactless, and instantly shareable way to exchange professional details in modern networking.
+              </p>
+            </div>
+          </div>
+          <div class="column cars">
+            <div class="content">
+              <img src="/w3images/cars3.jpg" alt="Car" style="width:100%">
+              <h4>Promote</h4>
+              <p>Our digital card  Enables efficient self-promotion and instant sharing of your professional information.</p>
+            </div>
+          </div>
+        
+          <div class="column people">
+            <div class="content">
+              <img src="/w3images/people1.jpg" alt="People" style="width:100%">
+              <h4>Simple</h4>
+              <p>Our digital card  simplify professional networking by enabling instant, contactless exchange of information.</p>
+            </div>
+          </div>
+          <div class="column people">
+            <div class="content">
+              <img src="/w3images/people2.jpg" alt="People" style="width:100%">
+              <h4>Easy</h4>
+              <p>Our digital card  make professional networking easy with instant, contactless exchange of information.</p>
+            </div>
+          </div>
+          <div class="column people">
+            <div class="content">
+              <img src="/w3images/people3.jpg" alt="People" style="width:100%">
+              <h4>safe</h4>
+              <p>Our digital card provide a safe, contactless way to exchange professional information during networking.</p>
+            </div>
+          </div>
+        <!-- END GRID -->
+        </div>   
+    </section>
+
+    <!-- Curriculum Vitae Section -->
+    <section class="container py-5" id="cv">
+      <div class="row mt-4 py-3">
+        <div class="col-12 d-flex flex-column text-center">
+          <h2>CURRICULUM VITAE</h2>
+          <h5 class="text-secondary fw-normal py-2 fst-italic">Before I found Liyu card here is a small sampling of some of the projects I've worked so far.</h5>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 mt-5 order-lg-0 order-1 text-center">
+          <img class="img-fluid rounded-circle border border-5 border-dark-subtle" src="https://raw.githubusercontent.com/Dires-coder/new1/main/g.jpg" alt="profile-img">
+          <h2 class="mt-3">Dires Gashu</h2>
+          <ul class="list-unstyled contact-info">
+            <li><i class="fas fa-envelope me-2"></i> diresgashu9228@gmail.com</li>
+            <li><i class="fas fa-phone me-2"></i> +251915276128</li>
+            <li><i class="fas fa-map-marker-alt me-2"></i> Addis Ababa</li>
+          </ul>
+          <ul class="social-icons my-5 d-flex justify-content-center">
+            <a href="#" class="bg-primary mx-2 text-white d-flex align-items-center justify-content-center text-decoration-none rounded-circle"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" class="bg-primary mx-2 text-white d-flex align-items-center justify-content-center text-decoration-none rounded-circle"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="bg-primary mx-2 text-white d-flex align-items-center justify-content-center text-decoration-none rounded-circle"><i class="fa-brands fa-linkedin-in"></i></a>
+          </ul>
+          <h5>Technical Skills</h5>
+          <ul class="list-unstyled">
+            <li>Learning experience designer</li>
+            <li>Front-end development</li>
+            <li> graphic design</li>
+            <li>Story telling</li>
+            <li>ICT technician</li>
+            <!-- Add or remove skills as needed -->
+          </ul>
+          <h5>Personal Interests</h5>
+          <ul class="list-unstyled">
+            <li>Reading Books</li>
+            <li>Writing Codes</li>
+            <li>Writing stories</li>
+            <!-- Add or remove interests as needed -->
+          </ul>
+        </div>
+        <div class="col-lg-7 order-lg-1 order-0 mt-5 text-start">
+          <h3>Profile</h3>
+          <hr>
+          <p>✴A skilled and adaptable Project Manager with
+             a proven track record of delivering complex projects
+              on time and within budget. Possessing a keen eye for detail 
+              and a talent for leading cross-functional teams, I excel
+               at driving initiatives from conception to successful completion.
+                With expertise in project planning, resource management, 
+                and risk mitigation, I consistently exceed client expectations
+                 and contribute to the overall growth and success of the organization.</p>
+          <h3>Highlights of Qualifications</h3>
+          <hr>
+          <ul>
+            <li>Learning Experience Designer</li>
+            <li>Project Manager</li>
+            <li>Trainer/individual Coach</li>
+            <!-- Add or remove qualifications as needed -->
+          </ul>
+          <h3>Education</h3>
+          <hr>
+          <dl>
+            <dt>✴2009 E.C - 2013 E.C </dt>
+            <dd>Bahir dar university</dd>
+            <dd>Bsc in computer engineering</dd>
+          </dl>
+          <dl>
+            <dt>✴2022 G.C </dt>
+            <dd>Redi school</dd>
+            <dd>Learning Experience Design (LXD)</dd>
+          </dl>
+          <dl>
+            <dt>✴Now in progress...</dt>
+            <dd>Skillmart international colleage </dd>
+            <dd>Msc in project management analysis and evaluation</dd>
+          </dl>
+          <h3>Additional Courses & Training</h3>
+          <hr>
+          <dl>
+            <dt>2022 G.C</dt>
+            <dd>✴LXD</dd>
+            <dd>Giz with Redi school</dd>
+          </dl>
+          <dl>
+            <dt>2023 G.C</dt>
+            <dd>✴Storytelling Training</dd>
+            <dd>Giz</dd>
+          </dl>
+          <dl>
+            <dt>2024 G.C</dt>
+            <dd>✴AI career essential</dd>
+            <dd>ALX</dd>
+          </dl>
+          <h3>Work Experience</h3>
+          <hr>
+          <dl>
+            <dt>✴2020- 2021</dt>
+            <dd>ICT technician</dd>
+            <dd>Renaissance</dd>
+            <!-- Add or remove work experience entries as needed -->
+          </dl>
+          <dl>
+            <dt>✴2021- 2023</dt>
+            <dd>Learning Experience Designer</dd>
+            <dd>Giz</dd>
+            <!-- Add or remove work experience entries as needed -->
+          </dl>
+          <dl>
+            <dt>✴2023- 2024</dt>
+            <dd>Learning Experience Designer</dd>
+            <dd>Xhub Addis</dd>
+            <!-- Add or remove work experience entries as needed -->
+          </dl>
+          <dl>
+            <dt>✴2024</dt>
+            <dd>Project manager and CTO</dd>
+            <dd>Enkoy technologies</dd>
+            <!-- Add or remove work experience entries as needed -->
+          </dl>
+          
+          <h3>Extracurricular Activities</h3>
+          <hr>
+          <dl>
+            <dt>✴Addis Admass Newspaper</dt>
+            <dd>Writer</dd>
+            <dd>Over the course of my career, I have authored over 100 articles for 
+                Addis Admass newspaper. My writing centers on social affairs,
+                 and I approach the topic through various literary genres, 
+                 including short stories and book reviews. My goal is to engage
+                  readers and provide meaningful insights into the issues that affect 
+                  our communities. Through my writing, I hope to spark conversations 
+                  and promote positive change.</dd>
+          </dl>
+        </div>
+      </div>      
+    </section>
+
+     <!-- Contact Section -->
+     <section class="py-5" id="contact">
+      <div class="container-xxl py-5">
+        <div class="col-12 d-flex flex-column text-center justify-content-center">
+          <h2 class="text-white">CONTACT ME</h2>
+          <h5 class="text-white fw-normal py-2 fst-italic">Interested if I'd be the right fit for your team? Fill in this form and I will respond within 24-48 hours.</h5>
+        </div>
+        <div class="row pt-4 mt-5">
+          <div class="col-12">
+            <form action="#" method="POST">
+              <div class="row d-flex justify-content-center">
+                <div class="col-lg-6">
+                  <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="Enter Name*" required>
+                    <label for="floatingInput">Enter Name*</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="floatingEmail" placeholder="Enter Email*" required>
+                    <label for="floatingEmail">Enter Email*</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input type="number" class="form-control" id="floatingPassword" placeholder="Enter Phone*" required>
+                    <label for="floatingPassword">Enter Phone*</label>
+                  </div>
+                </div>
+                <div class="form-floating col-lg-6">
+                  <textarea class="form-control" placeholder="Leave a comment here" id="floatingMessage" style="height: 205px" required></textarea>
+                  <label for="floatingMessage" class="px-4">Enter Message*</label>
+                </div>
+                <div class="col-12 mt-5 d-flex justify-content-center">
+                  <button class="btn btn-lg btn-outline-light">SEND MESSAGE</button>
+                </div>
+              </div>
+  
+            </form>
+          </div>
+        </div>
+       </div>
+     </section>
+
+     <!-- Footer -->
+     <footer>
+      <div class="container-xxl flex-wrap pt-3 d-flex align-items-center justify-content-center justify-content-md-between">
+        <p>Copyright © Dires Gashu</p>
+        <ul class="social-icons d-flex">
+          <a href="#" class="bg-primary mx-2 text-white d-flex align-items-center justify-content-center text-decoration-none rounded-circle"><small><i class="fa-brands fa-twitter"></i></small></a>
+          <a href="#" class="bg-primary mx-2 text-white d-flex align-items-center justify-content-center text-decoration-none rounded-circle"><small><i class="fa-brands fa-facebook-f"></i></small></a>
+          <a href="#" class="bg-primary mx-2 text-white d-flex align-items-center justify-content-center text-decoration-none rounded-circle"><small><i class="fa-brands fa-linkedin-in"></i></small></a>
+        </ul>
+      </div>
+     </footer>
+    
+     <!-- Bootstrap script link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script>
+        var words = ["Optimize business", "Accelerate  business", "Elevate  business", "Empower  business" , "Scale up  business" ,"How?"];
+        var i = 0;
+        var cursor = document.getElementById("typed");
+        var typingDelay = 100; // Adjust this value to change the typing speed
+  
+        function typeWriter() {
+          if (i < words.length) {
+            var currentWord = words[i];
+            var index = 0;
+            var typeInterval = setInterval(function () {
+              if (index < currentWord.length) {
+                cursor.textContent += currentWord.charAt(index);
+                index++;
+              } else {
+                clearInterval(typeInterval);
+                if (i === words.length - 1) {
+                  cursor.textContent = currentWord;
+                }
+                setTimeout(function () {
+                  cursor.textContent = "";
+                  i++;
+                  if (i >= words.length) {
+                    i = 0; // Reset the index to start the loop again
+                  }
+                  typeWriter();
+                }, 1000); // Pause for 1 second before typing the next word
+              }
+            }, typingDelay);
+          }
+        }
+  
+        typeWriter();
+      </script>
+      <script>
+        var indexValue = 1;
+        showImg(indexValue);
+        function btm_slide(e){showImg(indexValue = e);}
+        function side_slide(e){showImg(indexValue += e);}
+        function showImg(e){
+          var i;
+          const img = document.querySelectorAll('img');
+          const slider = document.querySelectorAll('.btm-slides span');
+          if(e > img.length){indexValue = 1}
+          if(e < 1){indexValue = img.length}
+          for(i = 0; i < img.length; i++){
+            img[i].style.display = "none";
+          }
+          for(i = 0; i < slider.length; i++){
+            slider[i].style.background = "rgba(255,255,255,0.1)";
+          }
+          img[indexValue-1].style.display = "block";
+          slider[indexValue-1].style.background = "white";
+        }
+     </script>
+
+     <script>
+        filterSelection("all") // Execute the function and show all columns
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+// Show filtered elements
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    }
+  }
+}
+
+// Hide elements that are not selected
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+     </script>
+  </body>
+</html>
