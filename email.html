@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Email Button</title>
+    <title>Email Form</title>
     <style>
         body {
             display: flex;
@@ -12,6 +12,19 @@
             height: 100vh;
             background-color: #f4f4f4;
             font-family: Arial, sans-serif;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        input[type="email"] {
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 250px;
         }
         button {
             padding: 10px 20px;
@@ -29,8 +42,17 @@
     </style>
 </head>
 <body>
-    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=diresgashu9228@gmail.com" target="_blank">
-        <button>Send Email via Gmail</button>
-    </a>
+    <form id="emailForm" onsubmit="sendEmail(event)">
+        <input type="email" id="email" placeholder="Enter email address" required>
+        <button type="submit">Compose Email</button>
+    </form>
+
+    <script>
+        function sendEmail(event) {
+            event.preventDefault();
+            const email = document.getElementById('email').value;
+            window.location.href = `mailto:${email}`;
+        }
+    </script>
 </body>
 </html>
